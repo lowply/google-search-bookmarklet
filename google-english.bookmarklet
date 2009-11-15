@@ -1,1 +1,1 @@
-javascript:(function()%7Bu=document.URL;location.href="http://www.google.com/search?hl=en&"+u.slice(u.indexOf("q="),u.indexOf("&"));%7D)();
+javascript:(function()%7Bu=document.URL;q=u.indexOf("q=");location.href="http://www.google.com/search?hl=en&"+u.slice(q,u.indexOf("&",q));%7D)();
