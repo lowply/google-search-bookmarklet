@@ -1,0 +1,2 @@
+Googleの検索結果ページにて、ワンクリックで英語の検索結果に飛べるBookmarkletです。
+「hl=ja」「lang_ja」「www.google.co.jp」をそれぞれ「hl=en」「lang_en」「www.google.com」にreplaceしているだけです。
