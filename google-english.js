@@ -1,1 +1,11 @@
-javascript:(function()%7Bvar%20q=document.URL.replace(/hl=ja/g,"hl=en");q=q.replace(/lang_ja/g,"lang_en");q=q.replace(/www.google.co.jp/g,"www.google.com");location.href=q;%7D)();
+javascript:(
+	function(){
+		var url = document.URL;
+		var from = url.indexOf("q=");
+		var to = url.indexOf("&");
+		var q = url.slice(from,to);
+		var des = "http://www.google.com/search?hl=en&"+q;
+		location.href=des;
+	}
+)
+();

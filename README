@@ -1,2 +1,4 @@
 Googleの検索結果ページにて、ワンクリックで英語の検索結果に飛べるBookmarkletです。
-「hl=ja」「lang_ja」「www.google.co.jp」をそれぞれ「hl=en」「lang_en」「www.google.com」にreplaceしているだけです。
+URL中の「q=」から「&」までを抜き出し、「www.google.com」に渡す仕様に変更しました。
+
+A bookmarklet to jump into Google English search result page from Japanse result page.
