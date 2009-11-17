@@ -1,8 +1,9 @@
-javascript:(
-	function(){
-		u=document.URL;
-		q=u.indexOf("q=");
-		location.href="http://www.google.com/search?hl=en&"+u.slice(q,u.indexOf("&",q));
+javascript:(function(){
+		g="http://www.google.com/search?hl=en&";
+		u=document.URL;q=u.indexOf("q=");
+		e=u.indexOf("&",q);
+		if(e==-1){e=u.indexOf(u.slice(-1),q)+1};
+		location.href=g+u.slice(q,e);
 	}
 )
 ();
