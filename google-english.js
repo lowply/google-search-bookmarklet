@@ -1,9 +1,12 @@
-javascript:(function(){
+javascript:(
+	function(){
 		g="http://www.google.com/search?hl=en&";
-		u=document.URL;q=u.indexOf("q=");
-		e=u.indexOf("&",q);
-		if(e==-1){e=u.indexOf(u.slice(-1),q)+1};
-		location.href=g+u.slice(q,e);
+		u=document.URL;
+		s=u.indexOf("&q=")+1;
+		if(s==0){s=u.indexOf("q=")};
+		e=u.indexOf("&",s);
+		if(e==-1){e=u.search(/$/)};
+		location.href=g+u.slice(s,e);
 	}
 )
 ();
