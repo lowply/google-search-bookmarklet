@@ -23,4 +23,4 @@ cat main.js \
 	| gsed -e "s/%3A/:/g" \
 	> main.bookmarklet
 
-gsed -i "s/\[Google English\]\(.*\)/\[Google English\]\($(cat main.bookmarklet)\)/g" index.md
+gsed -i "s/\[Google\ English\]\(.*\)/\[Google\ English\]\($(cat main.bookmarklet)\)/g" index.md
