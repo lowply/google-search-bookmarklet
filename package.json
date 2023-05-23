@@ -1,0 +1,19 @@
+{
+  "name": "google-search-bookmarklet",
+  "version": "0.0.1",
+  "description": "Google Search Bookmarklet",
+  "main": "main.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lowply/google-search-bookmarklet.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lowply/google-search-bookmarklet/issues"
+  },
+  "homepage": "https://github.com/lowply/google-search-bookmarklet#readme",
+  "dependencies": {
+    "bookmarkleter": "^1.1.0"
+  }
+}

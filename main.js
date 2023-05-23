@@ -1,12 +1,22 @@
-javascript:(
-	function(){
-		g="http://www.google.com/search?hl=en&";
-		u=document.URL;
-		s=u.indexOf("&q=")+1;
-		if(s==0){s=u.indexOf("q=")};
-		e=u.indexOf("&",s);
-		if(e==-1){e=u.search(/$/)};
-		location.href=g+u.slice(s,e);
-	}
-)
-();
+const bookmarkleter = require('bookmarkleter')
+const fs = require('fs')
+const langs = ["en", "ja"]
+
+langs.forEach(lang => {
+    const bookmarklet = bookmarkleter(`
+    if (document.location.host == "www.google.com") {
+        let query = []
+        query.push(document.URL.match(/q=[^&]+/)[0])
+        query.push("lr=lang_${lang}")
+        query.push("hl=${lang}")
+        window.location.assign("search?" + query.join("&"))
+    }
+    `, {
+        "iife": true,
+        "mangleVars": true,
+        "transpile": false
+    })
+    fs.writeFile(lang + ".bookmarklet", bookmarklet, (err) => {
+        if (err) throw err;
+    })
+})
