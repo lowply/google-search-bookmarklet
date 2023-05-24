@@ -1,14 +1,17 @@
 {
   "name": "google-search-bookmarklet",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "Google Search Bookmarklet",
   "main": "main.js",
+  "scripts": {
+    "build": "node main.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/lowply/google-search-bookmarklet.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Sho Mizutani",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/lowply/google-search-bookmarklet/issues"
   },

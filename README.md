@@ -1,14 +1,13 @@
 # Google Search Bookmarklet
 
-Bookmarklets that allows you to switch Google search result between English and Japanese.
+This bookmarklet allows you to switch Google search result between English and Japanese.
+
+## Usage
+
+View the [bookmarklet.js](/bookmarklet.js) file and click the "Copy raw file" icon to copy the bookmarklet into your clipboard.
+
+## Local development
 
 ```console
-npm i
-node main.js
-```
-
-This creates ${lang}.bookmarklet files. Then
-
-```console
-cat en.bookmarklet | pbcopy
+npm run build
 ```
